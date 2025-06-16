@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .container{
+            margin-top: 7rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .image img{
+            width: 400px;
+        }
+        .description{
+            justify-self: start;
+            margin-left: 2rem;
+        }
+        .title{
+            font-size: 1.6rem;
+        }
+        .button{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 1em;
+        }
+        .btn{
+            position: relative;
+            margin-top: 2em;
+            padding: 7px;
+            color: #fff;
+            background-color: #000;
+        }
+        .btn:nth-child(1) { background-color: blue; }
+        .btn:nth-child(2) { background-color: red; }
+        .btn:nth-child(3) { background-color: yellow; color: black; }
+        .btn:nth-child(4) { background-color: pink; color: black; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+                <img src="./download.jpeg" alt="">
+        </div>
+        <div class="description">
+            <p class="title">high top shoes</p>
+            <div class="button">
+                <button class="btn" value="download" >product 1</button>
+                <button class="btn" value="jk">product 2</button>
+                <button class="btn" value="jk3"> product 3</button>
+                <button class="btn" value="jk4">product 4</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const button = document.querySelectorAll(".btn");
+        const image = document.querySelector(".image img");
+        // const color = document.querySelector("backgroun-color")
+        button.forEach((buttons) => {   
+            buttons.addEventListener("click", () => {
+                const value = buttons.getAttribute("value");
+                image.src = "./" + value + ".jpeg";
+                // document.body.style.backgroundColor = 'lightblue';
+                document.body.style.backgroundColor = getComputedStyle(buttons).backgroundColor;
+            });
+            
+        });
+    </script>
+</body>
+</html>

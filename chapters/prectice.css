@@ -1,0 +1,13 @@
+.Add{
+    border: none;
+    background-color: rgb(255, 0, 0);
+    padding: 5px 20px 5px 20px;
+    color: #fff;
+}
+.wish{
+    padding: 5px 20px 5px 20px ;
+    background-color: black;
+    color: #fff;
+    border-color: #fff;
+    text-transform: uppercase;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prectice.css">
+
+</head>
+
+<body>
+    <button class="Add"
+        onclick="cartquantity = cartquantity + 1;document.querySelector('#cart-summary').innerText = `your bag has ${cartquantity} item`">Add
+        cart</button>
+    <button class="wish" onclick="cartquantity = cartquantity - 1;document.querySelector('#cart-summary').innerText= `your bag has ${cartquantity} item`">move To Wishlist</button>
+    <button class="Add" onclick="cartquantity = cartquantity + 2;document.querySelector('#cart-summary').innerText = `your bag has ${cartquantity} item` ">Add 1+1 sale Item</button>
+    <h1 id="cart-summary"></h1>
+    <p id="tag"></p>
+    <script>
+        let cartquantity = 0;
+        document.querySelector('#cart-summary').innerText = `your bag has ${cartquantity} item`
+        const tagname = "jayesh  vinay";
+        document.querySelector('#tag').innerText = tagname;
+     </script>
+</body>
+
+</html>
