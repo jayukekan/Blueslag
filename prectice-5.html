@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get value from input field</title>
+</head>
+<body>
+    <input type="text" id="nameinput" placeholder="Enter Name">
+    <button onclick="printname()">Print Name</button>
+    <p id="output"></p>
+</body>
+<script>
+    function printname(){
+        let name = document.getElementById("nameinput").value;
+        document.getElementById("output").innerText = `Hello, ${name}`;
+    }
+</script>
+</html>

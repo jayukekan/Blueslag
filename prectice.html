@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Text change on button click</title>
+</head>
+<body>
+    <span id="text">Hello Sir</span>
+    <button onclick="changetext()">Click me</button>
+</body>
+<script>
+   /* function changetext(){
+        document.getElementById('text').innerText = "Hello jayesh"
+    }*/
+
+  /* let ischange = false;
+
+   function changetext(){
+    if(ischange) {
+        document.getElementById("text").innerText = "Hello Sir";
+    }
+    else{
+        document.getElementById("text").innerText = "Hello Jayesh";
+    }
+    ischange = !ischange;
+   }*/
+
+  let ischange = false;
+
+  function changetext(){
+    const textElement = document.getElementById('text');
+
+    if (ischange) {
+        textElement.innerText = "Hello Sir";
+    }else{
+        textElement.innerText = "Hello Jayesh";
+    }
+    ischange = !ischange;
+  }
+</script>
+</html>
