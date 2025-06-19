@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox validation</title>
+</head>
+<body>
+    <input type="checkbox" id="agree" />
+    <label for="agree">I agree to terms</label>
+    <button onclick="submitform()">submit</button>
+    <p id="massage"></p>
+</body>
+<script>
+    function submitform(){
+        let checked = document.getElementById("agree").checked;
+        document.getElementById("massage").innerText = checked ? "Submited" : "Please agree to the term";
+    }
+</script>
+</html>

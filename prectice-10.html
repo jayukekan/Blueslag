@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Live character count in textarea</title>
+</head>
+<body>
+    <textarea id="textarea" oninput="countchar()" rows="4" cols="30"></textarea>
+    <p>Character: <span id="charcount">0</span></p>
+</body>
+<script>
+    function countchar(){
+        let count = document.getElementById("textarea").value;
+        document.getElementById("charcount").innerText = count.length;
+    }
+</script>
+</html>

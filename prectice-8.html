@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change font size using buttons</title>
+</head>
+<body>
+    <p id="text">Resize me!</p>
+    <button onclick="increasefont()">A+</button>
+    <button onclick="decreasefont()">A-</button>
+</body>
+<script>
+    let fontsize = 16;
+
+    function increasefont(){
+        fontsize += 2;
+        document.getElementById("text").style.fontSize = fontsize + "px";
+    }
+
+    function decreasefont(){
+        fontsize -= 2;
+        document.getElementById("text").style.fontSize = fontsize + "px";
+    }
+</script>
+</html>
