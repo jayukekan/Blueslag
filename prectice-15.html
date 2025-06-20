@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/hide password</title>
+</head>
+<body>
+    <input type="password" id="password">
+    <button onclick="toggleshow()">show/hide</button>
+</body>
+<script>
+    function toggleshow(){
+        let input = document.getElementById("password");
+        input.type = input.type === "password" ? "text" : "password";
+    }
+</script>
+</html>

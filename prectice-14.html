@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove last item from list</title>
+</head>
+<body>
+    <ul id="ul">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <button onclick="RemoveLast()">Remove Last</button>
+</body>
+<script>
+    function RemoveLast(){
+        let ul = document.getElementById("ul");
+        ul.removeChild(ul.lastElementChild);
+    }
+</script>
+</html>
