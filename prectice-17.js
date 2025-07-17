@@ -1,5 +1,6 @@
 // const abc = document.getElementsByClassName('abc');
 // const abcd= document.querySelectorAll('h1');
+const lis = document.querySelectorAll('li');
 const image = document.querySelector('img');
 const a = document.querySelector('a');
 const h1 = document.querySelector('h1');
@@ -17,3 +18,10 @@ console.log(a.getAttribute('href'));
 h2.textContent = "hello jayesh";
 console.log(h2);
 document.body.append(h2);
+
+for(let i = 0; i < lis.length; i++){
+    console.log(lis[i].textContent);
+}
+// lis.forEach(function(val){
+//  console.log(val.textContent);
+// })
